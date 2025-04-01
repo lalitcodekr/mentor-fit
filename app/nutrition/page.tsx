@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
 import { Search, Filter, Clock, Utensils, Users } from "lucide-react"
+import Image from 'next/image';
 
 const mealPlans = [
   {
@@ -110,7 +111,7 @@ export default function NutritionPage() {
         {mealPlans.map((plan) => (
           <Card key={plan.id} className="overflow-hidden">
             <div className="aspect-video relative">
-              <img src={plan.image || "/placeholder.svg"} alt={plan.title} className="object-cover w-full h-full" />
+              <Image src={plan.image || "/placeholder.svg"} alt={plan.title} className="object-cover w-full h-full" />
             </div>
             <CardHeader>
               <CardTitle>{plan.title}</CardTitle>

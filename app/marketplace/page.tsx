@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
 import { Search, Filter, ShoppingCart, Star } from "lucide-react"
+import Image from 'next/image';
 
 const products = [
   {
@@ -104,12 +105,12 @@ export default function MarketplacePage() {
         {products.map((product) => (
           <Card key={product.id} className="overflow-hidden">
             <div className="aspect-square relative bg-muted">
-              <img
+              <Image
                 src={product.image || "/placeholder.svg"}
                 alt={product.name}
                 className="object-cover w-full h-full"
               />
-              {product.bestseller && <Badge className="absolute top-2 left-2 bg-yellow-500">Bestseller</Badge>}
+              {product.bestseller && <Badge className="absolute top-3 left-2 bg-yellow-500">Bestseller</Badge>}
             </div>
             <CardHeader>
               <div className="flex justify-between items-start">

@@ -4,11 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Input } from "@/components/ui/input"
 import { Search, Filter, Star } from "lucide-react"
+import Image from 'next/image';
 
 const mentors = [
   {
     id: 1,
-    name: "Alex Johnson",
+    name: "Arjun Mehta",
     specialty: "Strength Training",
     experience: "8 years",
     rating: 4.9,
@@ -19,7 +20,7 @@ const mentors = [
   },
   {
     id: 2,
-    name: "Maria Rodriguez",
+    name: "Priya Sharma",
     specialty: "Yoga & Flexibility",
     experience: "12 years",
     rating: 4.8,
@@ -30,7 +31,7 @@ const mentors = [
   },
   {
     id: 3,
-    name: "David Kim",
+    name: "Rohan Iyer",
     specialty: "Weight Loss",
     experience: "6 years",
     rating: 4.7,
@@ -41,7 +42,7 @@ const mentors = [
   },
   {
     id: 4,
-    name: "Sarah Williams",
+    name: "Sneha Kapoor",
     specialty: "HIIT & Functional Training",
     experience: "5 years",
     rating: 4.9,
@@ -52,7 +53,7 @@ const mentors = [
   },
   {
     id: 5,
-    name: "James Wilson",
+    name: "Vikram Singh",
     specialty: "Sports Performance",
     experience: "10 years",
     rating: 4.8,
@@ -63,7 +64,7 @@ const mentors = [
   },
   {
     id: 6,
-    name: "Emily Chen",
+    name: "Ananya Nair",
     specialty: "Prenatal & Postnatal Fitness",
     experience: "7 years",
     rating: 4.9,
@@ -73,6 +74,7 @@ const mentors = [
     tags: ["Prenatal", "Postnatal", "Women's Fitness"],
   },
 ]
+
 
 export default function MentorsPage() {
   return (
@@ -99,7 +101,7 @@ export default function MentorsPage() {
         {mentors.map((mentor) => (
           <Card key={mentor.id} className="overflow-hidden">
             <div className="aspect-video relative bg-muted">
-              <img src={mentor.image || "/placeholder.svg"} alt={mentor.name} className="object-cover w-full h-full" />
+              <Image src={mentor.image || "/placeholder.svg"} alt={mentor.name} className="object-cover w-full h-full" />
               <div className="absolute top-2 right-2">
                 <Badge variant="secondary" className="flex items-center gap-1">
                   <Star className="h-3 w-3 fill-current" />

@@ -2,6 +2,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import FITNESS_IMG from "../public/fitness.png"
+import Image from 'next/image';
 
 export default function HeroSection() {
   return (
@@ -29,7 +30,7 @@ export default function HeroSection() {
           </div>
           <div className="md:w-1/2 relative">
             <div className="relative rounded-lg overflow-hidden shadow-xl">
-              <img
+              <Image
               src={FITNESS_IMG.src}
               alt="Fitness training session"
               className="w-full h-auto"

@@ -5,6 +5,7 @@ import { Progress } from "@/components/ui/progress"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Clock, Trophy, Users, Target, Flame } from "lucide-react"
+import Image from 'next/image';
 
 const challenges = [
   {
@@ -84,12 +85,13 @@ const challenges = [
 ]
 
 const topParticipants = [
-  { name: "Alex J.", points: 1250, image: "/placeholder.svg?height=50&width=50" },
-  { name: "Maria R.", points: 1120, image: "/placeholder.svg?height=50&width=50" },
-  { name: "David K.", points: 980, image: "/placeholder.svg?height=50&width=50" },
-  { name: "Sarah W.", points: 940, image: "/placeholder.svg?height=50&width=50" },
-  { name: "James W.", points: 890, image: "/placeholder.svg?height=50&width=50" },
+  { name: "Rahul V.", points: 1250, image: "/placeholder.svg?height=50&width=50" },
+  { name: "Neha T.", points: 1120, image: "/placeholder.svg?height=50&width=50" },
+  { name: "Amit P.", points: 980, image: "/placeholder.svg?height=50&width=50" },
+  { name: "Kiran D.", points: 940, image: "/placeholder.svg?height=50&width=50" },
+  { name: "Siddharth G.", points: 890, image: "/placeholder.svg?height=50&width=50" },
 ]
+
 
 export default function ChallengesPage() {
   return (
@@ -116,7 +118,7 @@ export default function ChallengesPage() {
             {challenges.map((challenge) => (
               <Card key={challenge.id} className="overflow-hidden">
                 <div className="aspect-video relative">
-                  <img
+                  <Image
                     src={challenge.image || "/placeholder.svg"}
                     alt={challenge.title}
                     className="object-cover w-full h-full"

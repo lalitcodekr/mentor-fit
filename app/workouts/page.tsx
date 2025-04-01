@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Clock, Dumbbell, BarChart, Filter, Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
+import Image from 'next/image';
 
 const workoutPlans = [
   {
@@ -106,7 +107,7 @@ export default function WorkoutsPage() {
         {workoutPlans.map((plan) => (
           <Card key={plan.id} className="overflow-hidden">
             <div className="aspect-video relative">
-              <img src={plan.image || "/placeholder.svg"} alt={plan.title} className="object-cover w-full h-full" />
+              <Image src={plan.image || "/placeholder.svg"} alt={plan.title} className="object-cover w-full h-full" />
               <Badge className="absolute top-2 right-2">{plan.level}</Badge>
             </div>
             <CardHeader>
