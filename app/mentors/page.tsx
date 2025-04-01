@@ -15,18 +15,18 @@ const mentors = [
     rating: 4.9,
     reviews: 127,
     bio: "Certified personal trainer specializing in strength training and muscle building. I help clients achieve their fitness goals through personalized workout plans.",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/Arjun Mehta.jpg",
     tags: ["Strength", "Bodybuilding", "Nutrition"],
   },
   {
     id: 2,
-    name: "Priya Sharma",
+    name: "Ananya Nair",
     specialty: "Yoga & Flexibility",
     experience: "12 years",
     rating: 4.8,
     reviews: 215,
     bio: "Yoga instructor with over a decade of experience. I focus on improving flexibility, balance, and mental wellness through customized yoga practices.",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/Ananya Nair.jpg",
     tags: ["Yoga", "Flexibility", "Meditation"],
   },
   {
@@ -37,7 +37,7 @@ const mentors = [
     rating: 4.7,
     reviews: 98,
     bio: "Weight loss specialist with a background in nutrition and exercise science. I create sustainable plans that help clients lose weight and keep it off.",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/Rohan Iyer.avif",
     tags: ["Weight Loss", "Cardio", "Nutrition"],
   },
   {
@@ -48,7 +48,7 @@ const mentors = [
     rating: 4.9,
     reviews: 76,
     bio: "Specializing in high-intensity interval training and functional fitness. My programs are designed to improve overall fitness and athletic performance.",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/Sneha Kapoor.avif",
     tags: ["HIIT", "Functional", "Athletic"],
   },
   {
@@ -59,18 +59,18 @@ const mentors = [
     rating: 4.8,
     reviews: 142,
     bio: "Former professional athlete turned coach. I help athletes of all levels improve their performance through specialized training programs.",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/Vikram Singh.jpg",
     tags: ["Sports", "Performance", "Athletic"],
   },
   {
     id: 6,
-    name: "Ananya Nair",
+    name: "Priya Sharma",
     specialty: "Prenatal & Postnatal Fitness",
     experience: "7 years",
     rating: 4.9,
     reviews: 89,
     bio: "Certified prenatal and postnatal fitness specialist. I create safe and effective workout plans for expectant and new mothers.",
-    image: "/placeholder.svg?height=200&width=200",
+    image: "/Priya Sharma.jpg",
     tags: ["Prenatal", "Postnatal", "Women's Fitness"],
   },
 ]
@@ -100,8 +100,14 @@ export default function MentorsPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {mentors.map((mentor) => (
           <Card key={mentor.id} className="overflow-hidden">
-            <div className="aspect-video relative bg-muted">
-              <Image src={mentor.image || "/placeholder.svg"} alt={mentor.name} className="object-cover w-full h-full" />
+            <div className="aspect-video relative bg-muted ">
+              <Image 
+                src={mentor.image || "/placeholder.svg"} 
+                alt={mentor.name} 
+                className="object-cover w-full h-full"
+                width={500}
+                height={300}
+              />
               <div className="absolute top-2 right-2">
                 <Badge variant="secondary" className="flex items-center gap-1">
                   <Star className="h-3 w-3 fill-current" />

@@ -5,69 +5,76 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
 import { Search, Filter, ShoppingCart, Star } from "lucide-react"
 import Image from 'next/image';
+import MAT from "../../public/Premium Yoga Mat.avif";
+import DUMB from "../../public/Adjustable Dumbbell Set.jpg";
+import PROTEIN from "../../public/Protein Powder - Chocolate.webp";
+import TRACKER from "../../public/Fitness Tracker Watch.webp";
+import RESISTANCE from "../../public/Resistance Bands Set.avif";
+import MEAL from "../../public/Meal Prep Containers.webp";
+
 
 const products = [
   {
     id: 1,
     name: "Premium Yoga Mat",
     description: "Non-slip, eco-friendly yoga mat with extra cushioning for comfort during your practice.",
-    price: 49.99,
+    price: 499,
     rating: 4.8,
     reviews: 124,
     category: "equipment",
-    image: "/placeholder.svg?height=300&width=300",
+    image: MAT,
     bestseller: true,
   },
   {
     id: 2,
     name: "Adjustable Dumbbell Set",
     description: "Space-saving adjustable dumbbells that replace 15 sets of weights. Perfect for home gyms.",
-    price: 299.99,
+    price: 1699,
     rating: 4.9,
     reviews: 86,
     category: "equipment",
-    image: "/placeholder.svg?height=300&width=300",
+    image: DUMB,
   },
   {
     id: 3,
     name: "Protein Powder - Chocolate",
     description: "High-quality whey protein with 25g of protein per serving. No artificial flavors or sweeteners.",
-    price: 39.99,
+    price: 699,
     rating: 4.7,
     reviews: 215,
     category: "nutrition",
-    image: "/placeholder.svg?height=300&width=300",
+    image: PROTEIN,
   },
   {
     id: 4,
     name: "Fitness Tracker Watch",
     description: "Track your workouts, heart rate, sleep, and more with this advanced fitness tracker.",
-    price: 129.99,
+    price: 1299,
     rating: 4.6,
     reviews: 178,
     category: "wearables",
-    image: "/placeholder.svg?height=300&width=300",
+    image: TRACKER,
     bestseller: true,
   },
   {
     id: 5,
     name: "Resistance Bands Set",
     description: "Set of 5 resistance bands of varying strengths for versatile home workouts.",
-    price: 24.99,
+    price: 399,
     rating: 4.8,
     reviews: 92,
     category: "equipment",
-    image: "/placeholder.svg?height=300&width=300",
+    image: RESISTANCE,
   },
   {
     id: 6,
     name: "Meal Prep Containers",
     description: "BPA-free, portion-controlled containers perfect for meal prepping and nutrition planning.",
-    price: 19.99,
+    price: 299,
     rating: 4.5,
     reviews: 63,
     category: "nutrition",
-    image: "/placeholder.svg?height=300&width=300",
+    image: MEAL,
   },
 ]
 
@@ -104,11 +111,13 @@ export default function MarketplacePage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => (
           <Card key={product.id} className="overflow-hidden">
-            <div className="aspect-square relative bg-muted">
+            <div className="aspect-square relative bg-muted flex items-center justify-center">
               <Image
-                src={product.image || "/placeholder.svg"}
-                alt={product.name}
-                className="object-cover w-full h-full"
+              src={product.image || "/placeholder.svg"}
+              alt={product.name}
+              className="object-contain"
+              width={500}
+              height={300}
               />
               {product.bestseller && <Badge className="absolute top-3 left-2 bg-yellow-500">Bestseller</Badge>}
             </div>
@@ -118,7 +127,7 @@ export default function MarketplacePage() {
                   <CardTitle>{product.name}</CardTitle>
                   <CardDescription className="mt-2">{product.description}</CardDescription>
                 </div>
-                <div className="text-lg font-bold">${product.price}</div>
+                <div className="text-lg font-bold">₹{product.price}</div>
               </div>
             </CardHeader>
             <CardContent>

@@ -5,6 +5,13 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Input } from "@/components/ui/input"
 import { Search, Filter, Clock, Utensils, Users } from "lucide-react"
 import Image from 'next/image';
+import WEIGHT from "../../public/Weight Loss Meal Plan.jpg";
+import MUSCLE from "../../public/Muscle Building Plan.jpeg";
+import VEGETARIAN from "../../public/Vegetarian Essentials.jpg";
+import KETO from "../../public/keto kickstart.webp";
+import ATHLETIC from "../../public/Athletic Performance.webp";
+import FASTING from "../../public/Intermittent Fasting Guide.jpeg";
+
 
 const mealPlans = [
   {
@@ -16,7 +23,7 @@ const mealPlans = [
     meals: 5,
     duration: "4 weeks",
     category: "weight-loss",
-    image: "/placeholder.svg?height=300&width=500",
+    image: WEIGHT,
     tags: ["Low Calorie", "High Protein", "Balanced"],
   },
   {
@@ -27,7 +34,7 @@ const mealPlans = [
     meals: 6,
     duration: "8 weeks",
     category: "muscle-gain",
-    image: "/placeholder.svg?height=300&width=500",
+    image: MUSCLE,
     tags: ["High Protein", "Calorie Surplus", "Performance"],
   },
   {
@@ -38,7 +45,7 @@ const mealPlans = [
     meals: 4,
     duration: "6 weeks",
     category: "vegetarian",
-    image: "/placeholder.svg?height=300&width=500",
+    image: VEGETARIAN,
     tags: ["Plant-Based", "High Fiber", "Nutrient-Dense"],
   },
   {
@@ -49,7 +56,7 @@ const mealPlans = [
     meals: 3,
     duration: "4 weeks",
     category: "keto",
-    image: "/placeholder.svg?height=300&width=500",
+    image: KETO,
     tags: ["Low Carb", "High Fat", "Ketogenic"],
   },
   {
@@ -60,7 +67,7 @@ const mealPlans = [
     meals: 5,
     duration: "12 weeks",
     category: "performance",
-    image: "/placeholder.svg?height=300&width=500",
+    image: ATHLETIC,
     tags: ["Performance", "Recovery", "Energy"],
   },
   {
@@ -71,7 +78,7 @@ const mealPlans = [
     meals: 2,
     duration: "6 weeks",
     category: "fasting",
-    image: "/placeholder.svg?height=300&width=500",
+    image: FASTING,
     tags: ["Fasting", "Time-Restricted", "Metabolic Health"],
   },
 ]
@@ -111,7 +118,8 @@ export default function NutritionPage() {
         {mealPlans.map((plan) => (
           <Card key={plan.id} className="overflow-hidden">
             <div className="aspect-video relative">
-              <Image src={plan.image || "/placeholder.svg"} alt={plan.title} className="object-cover w-full h-full" />
+              <Image src={plan.image || "/placeholder.svg"} alt={plan.title} className="object-cover w-full h-full" width={500}
+                    height={300}/>
             </div>
             <CardHeader>
               <CardTitle>{plan.title}</CardTitle>

@@ -5,21 +5,21 @@ const testimonials = [
   {
     quote:
       "This platform completely transformed my fitness journey. The personalized workout plans and nutrition guidance helped me lose 30 pounds in just 4 months!",
-    name: "Sarah Johnson",
+    name: "Arjun Singh",
     role: "Member for 6 months",
     avatar: "/placeholder.svg?height=100&width=100",
   },
   {
     quote:
       "As a busy professional, I never had time to plan my workouts. The mentors here created a schedule that fits perfectly with my lifestyle.",
-    name: "Michael Chen",
+    name: "John Di Souza",
     role: "Member for 1 year",
     avatar: "/placeholder.svg?height=100&width=100",
   },
   {
     quote:
       "The gamification aspect keeps me motivated. Earning badges and competing with friends makes fitness fun rather than a chore.",
-    name: "Jessica Williams",
+    name: "Priya Sharma",
     role: "Member for 3 months",
     avatar: "/placeholder.svg?height=100&width=100",
   },

@@ -5,6 +5,13 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Clock, Dumbbell, BarChart, Filter, Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import Image from 'next/image';
+import STRENGTH from "../../public/Beginner Strength Training.jpg";
+import ENDURANCE from "../../public/HIIT Fat Burner.jpg";
+import FLEXIBILITY from "../../public/Yoga for Flexibility.webp";
+import POWERLIFTING from "../../public/Advanced Powerlifting.jpg";
+import CORE from "../../public/Core Strength & Stability.jpeg";
+import BODYWEIGHT from "../../public/Bodyweight Fitness.jpg";
+
 
 const workoutPlans = [
   {
@@ -15,7 +22,7 @@ const workoutPlans = [
     intensity: "Low to Moderate",
     category: "strength",
     level: "beginner",
-    image: "/placeholder.svg?height=300&width=500",
+    image: STRENGTH,
   },
   {
     id: 2,
@@ -26,7 +33,7 @@ const workoutPlans = [
     intensity: "High",
     category: "cardio",
     level: "intermediate",
-    image: "/placeholder.svg?height=300&width=500",
+    image: ENDURANCE,
   },
   {
     id: 3,
@@ -36,7 +43,7 @@ const workoutPlans = [
     intensity: "Low",
     category: "flexibility",
     level: "beginner",
-    image: "/placeholder.svg?height=300&width=500",
+    image: FLEXIBILITY,
   },
   {
     id: 4,
@@ -47,7 +54,7 @@ const workoutPlans = [
     intensity: "Very High",
     category: "strength",
     level: "advanced",
-    image: "/placeholder.svg?height=300&width=500",
+    image: POWERLIFTING,
   },
   {
     id: 5,
@@ -58,7 +65,7 @@ const workoutPlans = [
     intensity: "Moderate",
     category: "strength",
     level: "intermediate",
-    image: "/placeholder.svg?height=300&width=500",
+    image: CORE,
   },
   {
     id: 6,
@@ -69,7 +76,7 @@ const workoutPlans = [
     intensity: "Moderate",
     category: "strength",
     level: "beginner",
-    image: "/placeholder.svg?height=300&width=500",
+    image: BODYWEIGHT,
   },
 ]
 
@@ -107,7 +114,8 @@ export default function WorkoutsPage() {
         {workoutPlans.map((plan) => (
           <Card key={plan.id} className="overflow-hidden">
             <div className="aspect-video relative">
-              <Image src={plan.image || "/placeholder.svg"} alt={plan.title} className="object-cover w-full h-full" />
+              <Image src={plan.image || "/placeholder.svg"} alt={plan.title} className="object-cover w-full h-full" width={500}
+                    height={300}/>
               <Badge className="absolute top-2 right-2">{plan.level}</Badge>
             </div>
             <CardHeader>

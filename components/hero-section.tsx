@@ -34,6 +34,8 @@ export default function HeroSection() {
               src={FITNESS_IMG.src}
               alt="Fitness training session"
               className="w-full h-auto"
+              width={500}
+              height={300}
               />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">

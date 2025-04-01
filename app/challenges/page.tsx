@@ -6,6 +6,12 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Clock, Trophy, Users, Target, Flame } from "lucide-react"
 import Image from 'next/image';
+import PUSH from "../../public/30-Day Push-Up Challenge.png";
+import HIIT from "../../public/HIIT Warrior.jpg";
+import YOGA from "../../public/Yoga Flow Mastery.webp";
+import NUTRITION from "../../public/Nutrition Reset.jpg";
+import MEDITATION from "../../public/Meditation Mindfulness.jpg";
+import WALK from "../../public/10K Steps Daily.jpg";
 
 const challenges = [
   {
@@ -17,7 +23,7 @@ const challenges = [
     difficulty: "Beginner to Intermediate",
     progress: 65,
     category: "strength",
-    image: "/placeholder.svg?height=300&width=500",
+    image: PUSH,
     reward: "Digital Badge + 500 Points",
   },
   {
@@ -30,7 +36,7 @@ const challenges = [
     difficulty: "All Levels",
     progress: 42,
     category: "cardio",
-    image: "/placeholder.svg?height=300&width=500",
+    image: WALK,
     reward: "Digital Badge + 300 Points",
   },
   {
@@ -42,7 +48,7 @@ const challenges = [
     difficulty: "All Levels",
     progress: 30,
     category: "flexibility",
-    image: "/placeholder.svg?height=300&width=500",
+    image: YOGA,
     reward: "Digital Badge + 400 Points",
   },
   {
@@ -54,7 +60,7 @@ const challenges = [
     difficulty: "All Levels",
     progress: 80,
     category: "nutrition",
-    image: "/placeholder.svg?height=300&width=500",
+    image: NUTRITION,
     reward: "Digital Badge + 450 Points",
   },
   {
@@ -67,7 +73,7 @@ const challenges = [
     difficulty: "Intermediate to Advanced",
     progress: 55,
     category: "cardio",
-    image: "/placeholder.svg?height=300&width=500",
+    image: HIIT,
     reward: "Digital Badge + 600 Points",
   },
   {
@@ -79,7 +85,7 @@ const challenges = [
     difficulty: "All Levels",
     progress: 25,
     category: "wellness",
-    image: "/placeholder.svg?height=300&width=500",
+    image: MEDITATION,
     reward: "Digital Badge + 350 Points",
   },
 ]
@@ -122,6 +128,8 @@ export default function ChallengesPage() {
                     src={challenge.image || "/placeholder.svg"}
                     alt={challenge.title}
                     className="object-cover w-full h-full"
+                    width={500}
+                    height={300}
                   />
                   <Badge className="absolute top-2 right-2">{challenge.category}</Badge>
                 </div>
